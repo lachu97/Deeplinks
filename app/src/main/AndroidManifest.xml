@@ -14,15 +14,16 @@
             android:exported="false" />
         <activity
             android:name=".AnotherActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight">
             <intent-filter android:label="someactivity">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
-                <data android:scheme="http"
-                    android:host="www.example.com"
-                    android:pathPrefix="/gizmos" />
+                <data android:scheme="https"
+                    android:host="www.mydomain.com"
+                    android:pathPrefix="/giz" />
                 <!-- note that the leading "/" is required for pathPrefix-->
             </intent-filter>
         </activity>
@@ -35,6 +36,13 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--                &lt;!&ndash; Accepts URIs that begin with "http://www.example.com/gizmos” &ndash;&gt;-->
+<!--                <data android:scheme="http"-->
+<!--                    android:host="www.example.com"-->
+<!--                    android:pathPrefix="/gizmos" />-->
             </intent-filter>
         </activity>
     </application>
